@@ -1,0 +1,64 @@
+﻿<Page x:Class="RentCar.Pages.CarsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CarsPage">
+
+    <Border Grid.Column="0">
+        <DataGrid 
+                x:Name="DataGridCars" 
+                AutoGenerateColumns="False" IsReadOnly="False"
+                ColumnHeaderStyle="{DynamicResource DataGridHeaderStyle}">
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    Header="Id"
+                    Binding="{Binding Id}"
+                    Width="4"></DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Модель"
+                    Binding="{Binding ModelName}"
+                    Width="*"></DataGridTextColumn>
+                <DataGridTextColumn 
+                    Header="Цвет"
+                    Binding="{Binding Color.ColorName}"
+                    Width="*">
+                </DataGridTextColumn>
+                <DataGridTextColumn
+                    Header="Гос. Номер"
+                    Binding="{Binding GovNumber}"
+                    Width="*"></DataGridTextColumn>
+                
+                <DataGridTextColumn
+                    Header="Дата выпуска"
+                    Binding="{Binding ProductDateYear}"
+                    Width="*"></DataGridTextColumn>
+                <DataGridTextColumn
+                    Header="Стоимость аренды"
+                    Binding="{Binding DailyRentalCost}"
+                    Width="*"></DataGridTextColumn>
+                <DataGridTextColumn
+                    Header="Доступность"
+                    Binding="{Binding Available}"
+                    Width="*"></DataGridTextColumn>
+                
+                <!--#region Кнопка просмотра -->
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate x:Name="ButtonOpenColumn">
+                            <Button 
+                                x:Name="ButtonOpen" 
+                                IsEnabled="True"
+                                Content="Открыть"
+                                Click="ButtonOpen_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--#endregion-->
+                
+            </DataGrid.Columns>
+        </DataGrid>
+    </Border>
+</Page>

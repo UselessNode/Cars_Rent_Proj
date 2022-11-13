@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c385a0e8821a4f569e176b193bf34bdd" Name="Diagram1" ShowGrid="true">
+        <EntityTypeShape EntityType="CarsDatabaseModel.Auto" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" FillColor="SlateBlue" />
+        <EntityTypeShape EntityType="CarsDatabaseModel.Client" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" FillColor="SlateBlue" />
+        <EntityTypeShape EntityType="CarsDatabaseModel.Color" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" FillColor="SlateBlue" />
+        <EntityTypeShape EntityType="CarsDatabaseModel.Rent" Width="1.5" PointX="3" PointY="5" IsExpanded="true" FillColor="SlateBlue" />
+        <EntityTypeShape EntityType="CarsDatabaseModel.Role" Width="1.5" PointX="3.75" PointY="2.5" IsExpanded="true" FillColor="SlateBlue" />
+        <EntityTypeShape EntityType="CarsDatabaseModel.Users" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" FillColor="SlateBlue" />
+        <AssociationConnector Association="CarsDatabaseModel.FK__Auto__ColorId__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDatabaseModel.FK__Rent__AutoId__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDatabaseModel.FK__Rent__ClientId__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDatabaseModel.FK__Users__Client__1CBC4616" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDatabaseModel.FK__Users__Role__1BC821DD" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

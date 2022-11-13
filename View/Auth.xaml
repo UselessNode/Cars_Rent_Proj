@@ -1,0 +1,51 @@
+﻿<Window x:Class="Cars.View.Auth"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cars.View"
+        mc:Ignorable="d"
+        Title="Авторизация" 
+        Height="400" Width="400"
+        Background="#383838"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel Margin="16">
+        <Image x:Name="LogoImage"
+               Height="190" 
+               Width="250" Source="/Resources/Auth_Image.png"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+            <TextBox 
+                x:Name="LoginInput" 
+                Style="{StaticResource TextBoxStyle}"
+                Width="256"/>
+            <Label 
+                    Style="{StaticResource LabelStyle}" 
+                    Content="Логин" Width="62"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <PasswordBox 
+                x:Name="PasswordInput" 
+                Style="{StaticResource PassBoxStyle}"
+                Width="256"/>
+            <Label 
+                    Style="{StaticResource LabelStyle}" 
+                    Content="Пароль" Width="62"/>
+        </StackPanel>
+        <Button 
+            x:Name="LogInButton" 
+            Style="{StaticResource ButtonStyle}"
+            Content="Вход"
+            Width="96px"
+            Margin="0,8,0,0"
+            Click="loginButtonClick"/>
+        <TextBlock 
+            Text="Войти как гость"
+            HorizontalAlignment="Center"
+            Foreground="#9c90f2"
+            TextDecorations="Underline"
+            Cursor="Hand" MouseDown="guestButtonClick"/>
+    </StackPanel>
+</Window>
